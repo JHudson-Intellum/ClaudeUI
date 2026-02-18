@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Color Primitives — ID.s Design System
+   Source: Figma "ID.s 2026 _WIP" → Light tokens page
+
+   These are raw palette values. Semantic tokens (coming later) will
+   reference these primitives for light/dark mode mapping.
+   ========================================================================== */
+
+:root {
+  /* Grey */
+  --grey-0: #000000;
+  --grey-10: #212529;
+  --grey-20: #343a40;
+  --grey-30: #495057;
+  --grey-40: #6c757d;
+  --grey-50: #868e96;
+  --grey-60: #adb5bd;
+  --grey-70: #ced4da;
+  --grey-80: #dee2e6;
+  --grey-90: #e9ecef;
+  --grey-95: #f1f3f5;
+  --grey-100: #f8f9fa;
+  --grey-150: #fcfcfd;
+  --grey-200: #ffffff;
+
+  /* Blue */
+  --blue-10: #00254d;
+  --blue-20: #002d6b;
+  --blue-30: #00419c;
+  --blue-40: #1b62d6;
+  --blue-50: #3168f6;
+  --blue-60: #5b8def;
+  --blue-70: #84adf4;
+  --blue-80: #b3cffb;
+  --blue-90: #d9e7fd;
+  --blue-95: #e8f0fe;
+  --blue-100: #f0f7ff;
+  --blue-150: #f5f9ff;
+
+  /* Red */
+  --red-10: #381316;
+  --red-20: #571d20;
+  --red-30: #7d2327;
+  --red-40: #b5312e;
+  --red-50: #e03131;
+  --red-60: #f06060;
+  --red-70: #f48e8e;
+  --red-80: #f8bcbc;
+  --red-90: #fce0e0;
+  --red-100: #fff0f0;
+
+  /* Green */
+  --green-10: #1b311e;
+  --green-20: #1e4d27;
+  --green-30: #2b6e3f;
+  --green-40: #2f9e44;
+  --green-50: #40c057;
+  --green-60: #69db7c;
+  --green-70: #8ce99a;
+  --green-80: #b2f2bb;
+  --green-90: #d3f9d8;
+  --green-100: #effbef;
+
+  /* Amber */
+  --amber-10: #4e2009;
+  --amber-20: #693304;
+  --amber-30: #945a1c;
+  --amber-40: #d9730d;
+  --amber-50: #f59f00;
+  --amber-60: #fcc419;
+  --amber-70: #ffe066;
+  --amber-80: #ffec99;
+  --amber-90: #fff3bf;
+  --amber-100: #fff6e5;
+
+  /* AI Gradients */
+  --ai-gradient: linear-gradient(18deg, rgba(49, 104, 246, 1) 13%, rgba(255, 123, 202, 1) 95%);
+  --ai-gradient-5: linear-gradient(18deg, rgba(49, 104, 246, 0.05) 13%, rgba(255, 123, 202, 0.05) 95%);
+  --ai-gradient-10: linear-gradient(18deg, rgba(49, 104, 246, 0.1) 13%, rgba(255, 123, 202, 0.1) 95%);
+  --ai-gradient-20: linear-gradient(18deg, rgba(49, 104, 246, 0.2) 13%, rgba(255, 123, 202, 0.2) 95%);
+}
