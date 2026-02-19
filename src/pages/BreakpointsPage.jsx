@@ -13,7 +13,7 @@ export default function BreakpointsPage() {
       </h2>
       <p style={{
         fontSize: 14,
-        color: 'var(--grey-40)',
+        color: 'var(--page-secondary)',
         marginBottom: 12,
         maxWidth: 600,
       }}>
@@ -22,7 +22,7 @@ export default function BreakpointsPage() {
       </p>
       <p style={{
         fontSize: 12,
-        color: 'var(--grey-50)',
+        color: 'var(--page-muted)',
         marginBottom: 48,
         maxWidth: 600,
         fontFamily: 'monospace',
@@ -38,13 +38,13 @@ export default function BreakpointsPage() {
               <div style={{
                 fontSize: 14,
                 fontWeight: 600,
-                color: 'var(--grey-20)',
+                color: 'var(--page-text)',
               }}>
                 {bp.name}
                 <span style={{
                   fontSize: 12,
                   fontWeight: 400,
-                  color: 'var(--grey-50)',
+                  color: 'var(--page-muted)',
                   marginLeft: 8,
                 }}>
                   {bp.label}
@@ -53,14 +53,14 @@ export default function BreakpointsPage() {
               <div style={{
                 fontSize: 10,
                 fontFamily: 'monospace',
-                color: 'var(--grey-50)',
+                color: 'var(--page-muted)',
                 marginTop: 2,
               }}>
                 --breakpoint-{bp.name}
               </div>
               <div style={{
                 fontSize: 11,
-                color: 'var(--grey-60)',
+                color: 'var(--page-subtle)',
                 marginTop: 2,
               }}>
                 {bp.range}
@@ -91,7 +91,7 @@ export default function BreakpointsPage() {
                   top: -18,
                   fontSize: 10,
                   fontFamily: 'monospace',
-                  color: 'var(--grey-50)',
+                  color: 'var(--page-muted)',
                   transform: 'translateX(-50%)',
                 }}>
                   {bp.min}px
@@ -105,14 +105,14 @@ export default function BreakpointsPage() {
       <div style={{
         marginTop: 48,
         padding: 24,
-        background: 'var(--grey-100)',
+        background: 'var(--code-bg)',
         borderRadius: 'var(--rounded-md)',
-        border: '1px solid var(--grey-90)',
+        border: '1px solid var(--swatch-border)',
       }}>
         <div style={{
           fontSize: 13,
           fontWeight: 600,
-          color: 'var(--grey-20)',
+          color: 'var(--page-text)',
           marginBottom: 12,
         }}>
           Usage
@@ -120,7 +120,7 @@ export default function BreakpointsPage() {
         <pre style={{
           fontSize: 12,
           fontFamily: 'var(--font-mono)',
-          color: 'var(--grey-30)',
+          color: 'var(--page-text)',
           lineHeight: 1.6,
           margin: 0,
         }}>{`/* Mobile-first: no query needed for sm */

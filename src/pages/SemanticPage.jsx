@@ -126,10 +126,10 @@ function Swatch({ token, maps }) {
         height: 48,
         borderRadius: 'var(--rounded-sm)',
         flexShrink: 0,
-        background: isBorder || isText ? 'var(--grey-200)' : `var(--${token})`,
+        background: isBorder || isText ? 'var(--preview-bg)' : `var(--${token})`,
         border: isBorder
           ? `3px solid var(--${token})`
-          : '1px solid var(--grey-90)',
+          : '1px solid var(--swatch-border)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -148,14 +148,14 @@ function Swatch({ token, maps }) {
         <div style={{
           fontSize: 13,
           fontWeight: 600,
-          color: 'var(--grey-20)',
+          color: 'var(--page-text)',
         }}>
           --{token}
         </div>
         <div style={{
           fontSize: 11,
           fontFamily: 'monospace',
-          color: 'var(--grey-50)',
+          color: 'var(--page-muted)',
           marginTop: 1,
         }}>
           {maps}
@@ -173,7 +173,7 @@ export default function SemanticPage() {
       </h2>
       <p style={{
         fontSize: 14,
-        color: 'var(--grey-40)',
+        color: 'var(--page-secondary)',
         marginBottom: 12,
         maxWidth: 600,
       }}>
@@ -182,7 +182,7 @@ export default function SemanticPage() {
       </p>
       <p style={{
         fontSize: 12,
-        color: 'var(--grey-50)',
+        color: 'var(--page-muted)',
         marginBottom: 48,
         maxWidth: 600,
       }}>
@@ -203,7 +203,7 @@ export default function SemanticPage() {
             </h3>
             <p style={{
               fontSize: 13,
-              color: 'var(--grey-50)',
+              color: 'var(--page-muted)',
               marginBottom: 20,
             }}>
               {section.description}

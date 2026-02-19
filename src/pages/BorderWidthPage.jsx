@@ -13,7 +13,7 @@ export default function BorderWidthPage() {
       </h2>
       <p style={{
         fontSize: 14,
-        color: 'var(--grey-40)',
+        color: 'var(--page-secondary)',
         marginBottom: 48,
         maxWidth: 600,
       }}>
@@ -27,21 +27,21 @@ export default function BorderWidthPage() {
               <div style={{
                 fontSize: 14,
                 fontWeight: 600,
-                color: 'var(--grey-20)',
+                color: 'var(--page-text)',
               }}>
                 {w.name}
               </div>
               <div style={{
                 fontSize: 10,
                 fontFamily: 'monospace',
-                color: 'var(--grey-50)',
+                color: 'var(--page-muted)',
                 marginTop: 2,
               }}>
                 --border-{w.name}
               </div>
               <div style={{
                 fontSize: 11,
-                color: 'var(--grey-60)',
+                color: 'var(--page-subtle)',
                 marginTop: 2,
               }}>
                 {w.value}

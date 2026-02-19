@@ -16,7 +16,7 @@ export default function ElevationPage() {
       </h2>
       <p style={{
         fontSize: 14,
-        color: 'var(--grey-40)',
+        color: 'var(--page-secondary)',
         marginBottom: 48,
         maxWidth: 600,
       }}>
@@ -31,21 +31,21 @@ export default function ElevationPage() {
               <div style={{
                 fontSize: 14,
                 fontWeight: 600,
-                color: 'var(--grey-20)',
+                color: 'var(--page-text)',
               }}>
                 {e.name}
               </div>
               <div style={{
                 fontSize: 10,
                 fontFamily: 'monospace',
-                color: 'var(--grey-50)',
+                color: 'var(--page-muted)',
                 marginTop: 2,
               }}>
                 --elevation-{e.name}
               </div>
               <div style={{
                 fontSize: 11,
-                color: 'var(--grey-60)',
+                color: 'var(--page-subtle)',
                 marginTop: 2,
               }}>
                 {e.description}
@@ -55,9 +55,9 @@ export default function ElevationPage() {
               width: 240,
               height: 80,
               borderRadius: 'var(--rounded-md)',
-              background: 'var(--grey-200)',
+              background: 'var(--preview-bg)',
               boxShadow: `var(--elevation-${e.name})`,
-              border: '1px solid var(--grey-90)',
+              border: '1px solid var(--swatch-border)',
             }} />
           </div>
         ))}

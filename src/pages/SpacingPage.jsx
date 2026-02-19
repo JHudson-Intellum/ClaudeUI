@@ -20,7 +20,7 @@ export default function SpacingPage() {
       </h2>
       <p style={{
         fontSize: 14,
-        color: 'var(--grey-40)',
+        color: 'var(--page-secondary)',
         marginBottom: 48,
         maxWidth: 600,
       }}>
@@ -39,7 +39,7 @@ export default function SpacingPage() {
               width: 100,
               fontSize: 14,
               fontWeight: 600,
-              color: 'var(--grey-20)',
+              color: 'var(--page-text)',
             }}>
               {s.name}
             </div>
@@ -53,14 +53,14 @@ export default function SpacingPage() {
             }} />
             <div style={{
               fontSize: 12,
-              color: 'var(--grey-50)',
+              color: 'var(--page-muted)',
               fontFamily: 'monospace',
             }}>
               --spacing-{s.name}
             </div>
             <div style={{
               fontSize: 12,
-              color: 'var(--grey-60)',
+              color: 'var(--page-subtle)',
             }}>
               {s.value}
             </div>

@@ -1,4 +1,5 @@
 import Badge from '../components/Badge.jsx'
+import CodeBlock from '../components/CodeBlock.jsx'
 
 const COLORS = [
   { id: 'default-max', label: 'Default Max' },
@@ -24,7 +25,7 @@ export default function BadgePage() {
       </h2>
       <p style={{
         fontSize: 14,
-        color: 'var(--grey-40)',
+        color: 'var(--page-secondary)',
         marginBottom: 12,
         maxWidth: 600,
       }}>
@@ -33,17 +34,17 @@ export default function BadgePage() {
       </p>
       <p style={{
         fontSize: 12,
-        color: 'var(--grey-50)',
+        color: 'var(--page-muted)',
         marginBottom: 48,
         maxWidth: 600,
       }}>
         Max = solid background. Mid = muted solid. Min = outlined with border.
       </p>
 
+      {/* ── All variants ── */}
       <h3 style={{
         fontSize: 18,
         fontWeight: 700,
-        color: 'var(--grey-10)',
         marginBottom: 24,
       }}>
         All Variants
@@ -60,8 +61,8 @@ export default function BadgePage() {
           <div key={color.id} style={{ display: 'contents' }}>
             <div style={{
               fontSize: 12,
-              fontFamily: 'monospace',
-              color: 'var(--grey-50)',
+              fontFamily: 'var(--font-mono)',
+              color: 'var(--page-muted)',
               minWidth: 140,
             }}>
               {color.id}
@@ -77,10 +78,10 @@ export default function BadgePage() {
         ))}
       </div>
 
+      {/* ── Without icons ── */}
       <h3 style={{
         fontSize: 18,
         fontWeight: 700,
-        color: 'var(--grey-10)',
         marginBottom: 24,
       }}>
         Without Icon
@@ -94,22 +95,156 @@ export default function BadgePage() {
         <Badge color="brand-max" showIcon={false}>New</Badge>
       </div>
 
+      {/* ── With icons ── */}
       <h3 style={{
         fontSize: 18,
         fontWeight: 700,
-        color: 'var(--grey-10)',
         marginBottom: 24,
       }}>
         With Icons
       </h3>
 
-      <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 56 }}>
         <Badge color="success-max" icon="check_circle">Approved</Badge>
         <Badge color="destructive-min" icon="error">Failed</Badge>
         <Badge color="alert-min" icon="warning">Pending</Badge>
         <Badge color="brand-min" icon="info">Info</Badge>
         <Badge color="default-mid" icon="schedule">Scheduled</Badge>
       </div>
+
+      {/* ── Code snippets ── */}
+      <h3 style={{
+        fontSize: 18,
+        fontWeight: 700,
+        marginBottom: 24,
+        paddingTop: 24,
+        borderTop: '1px solid var(--code-border)',
+      }}>
+        Usage
+      </h3>
+
+      <CodeBlock title="Import">{`import Badge from '@/components/Badge'`}</CodeBlock>
+
+      <CodeBlock title="Basic">{`<Badge>Default</Badge>
+
+<Badge color="success-max">Active</Badge>
+
+<Badge color="destructive-min" size="small">Error</Badge>`}</CodeBlock>
+
+      <CodeBlock title="With icon (Google Material Symbols)">{`<Badge color="success-max" icon="check_circle">
+  Approved
+</Badge>
+
+<Badge color="alert-min" icon="warning" size="large">
+  Pending Review
+</Badge>`}</CodeBlock>
+
+      <CodeBlock title="Without icon">{`<Badge color="brand-max" showIcon={false}>
+  New
+</Badge>`}</CodeBlock>
+
+      {/* ── Props table ── */}
+      <h3 style={{
+        fontSize: 18,
+        fontWeight: 700,
+        marginBottom: 24,
+        marginTop: 32,
+      }}>
+        Props
+      </h3>
+
+      <div style={{
+        border: '1px solid var(--code-border)',
+        borderRadius: 'var(--rounded-md)',
+        overflow: 'hidden',
+        marginBottom: 56,
+      }}>
+        <table style={{
+          width: '100%',
+          borderCollapse: 'collapse',
+          fontSize: 13,
+        }}>
+          <thead>
+            <tr style={{ background: 'var(--code-bg)' }}>
+              {['Prop', 'Type', 'Default', 'Description'].map(h => (
+                <th key={h} style={{
+                  textAlign: 'left',
+                  padding: '10px 16px',
+                  fontWeight: 600,
+                  borderBottom: '1px solid var(--code-border)',
+                }}>
+                  {h}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['children', 'ReactNode', '"Badge Text"', 'Label content'],
+              ['color', 'string', '"default-max"', 'Color variant (see list above)'],
+              ['size', '"small" | "default" | "large"', '"default"', 'Badge size'],
+              ['icon', 'string', 'undefined', 'Material Symbol name'],
+              ['showIcon', 'boolean', 'true', 'Toggle icon visibility'],
+            ].map(([prop, type, def, desc]) => (
+              <tr key={prop} style={{ borderBottom: '1px solid var(--code-border)' }}>
+                <td style={{ padding: '10px 16px', fontFamily: 'var(--font-mono)', fontWeight: 600 }}>{prop}</td>
+                <td style={{ padding: '10px 16px', fontFamily: 'var(--font-mono)', color: 'var(--page-muted)' }}>{type}</td>
+                <td style={{ padding: '10px 16px', fontFamily: 'var(--font-mono)', color: 'var(--page-muted)' }}>{def}</td>
+                <td style={{ padding: '10px 16px' }}>{desc}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* ── Architecture note ── */}
+      <h3 style={{
+        fontSize: 18,
+        fontWeight: 700,
+        marginBottom: 24,
+      }}>
+        Architecture
+      </h3>
+
+      <CodeBlock title="File structure">{`src/components/
+  Badge.jsx            # React component
+  Badge.module.css     # CSS Modules styles`}</CodeBlock>
+
+      <CodeBlock title="How it works">{`/* Badge uses CSS Modules with semantic token references.
+   Colors come from --msg-* tokens defined in tokens/semantic.css.
+   These map to primitive color values (grey, red, green, amber, blue).
+
+   Token chain example:
+   Badge "success-max" background
+     → CSS Module class .successMax
+     → background: var(--msg-success-background-max)
+     → semantic.css: var(--green-30)
+     → colors.css: #276d35
+
+   Sizes use spacing tokens for padding:
+     small:   height 20px, px var(--spacing-xs),  font 10px
+     default: height 24px, px var(--spacing-xs),  font 12px
+     large:   height 32px, px var(--spacing-sm),  font 14px
+
+   Icons use Google Material Symbols Outlined font.
+   Pass any symbol name as the icon prop (e.g. "check_circle").
+*/`}</CodeBlock>
+
+      <CodeBlock title="Color variants">{`/* 11 color variants across 3 intensity levels:
+
+   Max (solid bg, high contrast text):
+     default-max, destructive-max, success-max, alert-max, brand-max
+
+   Mid (solid bg, muted):
+     default-mid
+
+   Min (transparent bg, colored border + text):
+     default-min, destructive-min, success-min, alert-min, brand-min
+
+   All colors reference --msg-{type}-{role}-{intensity} semantic tokens.
+   Light/dark mode is handled at the semantic token layer —
+   the component CSS never changes.
+*/`}</CodeBlock>
     </div>
   )
 }

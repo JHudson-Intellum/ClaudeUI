@@ -31,11 +31,11 @@ const COPY_WEIGHTS = [
 function SectionHeader({ title, description }) {
   return (
     <div style={{ marginBottom: 24 }}>
-      <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--grey-20)' }}>
+      <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--page-text)' }}>
         {title}
       </h3>
       {description && (
-        <p style={{ fontSize: 13, color: 'var(--grey-50)', marginTop: 4 }}>
+        <p style={{ fontSize: 13, color: 'var(--page-muted)', marginTop: 4 }}>
           {description}
         </p>
       )}
@@ -48,7 +48,7 @@ function TokenLabel({ text }) {
     <span style={{
       fontSize: 10,
       fontFamily: 'monospace',
-      color: 'var(--grey-50)',
+      color: 'var(--page-muted)',
       display: 'block',
       marginTop: 2,
     }}>
@@ -65,7 +65,7 @@ export default function TypographyPage() {
       </h2>
       <p style={{
         fontSize: 14,
-        color: 'var(--grey-40)',
+        color: 'var(--page-secondary)',
         marginBottom: 48,
         maxWidth: 600,
       }}>

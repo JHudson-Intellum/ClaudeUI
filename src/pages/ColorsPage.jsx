@@ -62,19 +62,19 @@ function Swatch({ token, label }) {
         height: 56,
         borderRadius: 8,
         background: `var(${token})`,
-        border: '1px solid var(--grey-80)',
+        border: '1px solid var(--swatch-border)',
       }} />
       <div style={{
         fontSize: 12,
         fontWeight: 500,
         marginTop: 6,
-        color: 'var(--grey-30)',
+        color: 'var(--page-text)',
       }}>
         {label}
       </div>
       <div style={{
         fontSize: 10,
-        color: 'var(--grey-50)',
+        color: 'var(--page-muted)',
         fontFamily: 'monospace',
       }}>
         {token}
@@ -91,7 +91,7 @@ function AlphaSwatch({ token, label }) {
         height: 56,
         borderRadius: 8,
         background: `var(${token})`,
-        border: '1px solid var(--grey-80)',
+        border: '1px solid var(--swatch-border)',
         backgroundImage: `
           linear-gradient(45deg, var(--grey-80) 25%, transparent 25%),
           linear-gradient(-45deg, var(--grey-80) 25%, transparent 25%),
@@ -112,13 +112,13 @@ function AlphaSwatch({ token, label }) {
         fontSize: 12,
         fontWeight: 500,
         marginTop: 6,
-        color: 'var(--grey-30)',
+        color: 'var(--page-text)',
       }}>
         {label}
       </div>
       <div style={{
         fontSize: 10,
-        color: 'var(--grey-50)',
+        color: 'var(--page-muted)',
         fontFamily: 'monospace',
       }}>
         {token}
@@ -133,7 +133,7 @@ function SectionHeader({ title }) {
       fontSize: 18,
       fontWeight: 600,
       marginBottom: 16,
-      color: 'var(--grey-20)',
+      color: 'var(--page-text)',
     }}>
       {title}
     </h3>
@@ -152,7 +152,7 @@ export default function ColorsPage() {
       </h2>
       <p style={{
         fontSize: 14,
-        color: 'var(--grey-40)',
+        color: 'var(--page-secondary)',
         marginBottom: 48,
         maxWidth: 600,
       }}>
