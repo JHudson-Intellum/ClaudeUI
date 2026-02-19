@@ -4,6 +4,7 @@
 @import './tokens/radius.css';
 @import './tokens/elevation.css';
 @import './tokens/border-width.css';
+@import './tokens/breakpoints.css';
 @import './tokens/semantic.css';
 
 * {

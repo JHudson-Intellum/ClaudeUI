@@ -5,6 +5,7 @@ import SpacingPage from './pages/SpacingPage.jsx'
 import RadiusPage from './pages/RadiusPage.jsx'
 import ElevationPage from './pages/ElevationPage.jsx'
 import BorderWidthPage from './pages/BorderWidthPage.jsx'
+import BreakpointsPage from './pages/BreakpointsPage.jsx'
 import SemanticPage from './pages/SemanticPage.jsx'
 
 const NAV_ITEMS = [
@@ -14,6 +15,7 @@ const NAV_ITEMS = [
   { id: 'radius', label: 'Border Radius' },
   { id: 'elevation', label: 'Elevation' },
   { id: 'border-width', label: 'Border Width' },
+  { id: 'breakpoints', label: 'Breakpoints' },
   { id: 'semantic', label: 'Semantic Colors' },
 ]
 
@@ -76,6 +78,7 @@ export default function App() {
         {activePage === 'radius' && <RadiusPage />}
         {activePage === 'elevation' && <ElevationPage />}
         {activePage === 'border-width' && <BorderWidthPage />}
+        {activePage === 'breakpoints' && <BreakpointsPage />}
         {activePage === 'semantic' && <SemanticPage />}
       </main>
     </div>
