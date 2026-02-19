@@ -1,0 +1,126 @@
+/* Badge — ID.s Design System
+   3 sizes × 11 color variants (5 max, 1 mid, 5 min) */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3xs);
+  border-radius: var(--rounded-sm);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  white-space: nowrap;
+  border: none;
+}
+
+/* ── Sizes ── */
+
+.small {
+  height: 20px;
+  padding: var(--spacing-2xs) var(--spacing-xs);
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.default {
+  height: 24px;
+  padding: var(--spacing-2xs) var(--spacing-xs);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.large {
+  height: 32px;
+  padding: var(--spacing-2xs) var(--spacing-sm);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* ── Icon ── */
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.small .icon {
+  font-size: 14px;
+}
+
+.large .icon {
+  font-size: 18px;
+}
+
+/* ── Max variants (solid bg, contrasting text, no border) ── */
+
+.defaultMax {
+  background: var(--msg-default-background-max);
+  color: var(--msg-default-foreground-max);
+}
+
+.destructiveMax {
+  background: var(--msg-destructive-background-max);
+  color: var(--msg-destructive-foreground-max);
+}
+
+.successMax {
+  background: var(--msg-success-background-max);
+  color: var(--msg-success-foreground-max);
+}
+
+.alertMax {
+  background: var(--msg-alert-background-max);
+  color: var(--msg-alert-foreground-max);
+}
+
+.brandMax {
+  background: var(--msg-brand-background-max);
+  color: var(--msg-brand-foreground-max);
+}
+
+/* ── Mid variant (solid bg, light text, no border) ── */
+
+.defaultMid {
+  background: var(--msg-default-background-mid);
+  color: var(--msg-default-foreground-mid);
+}
+
+/* ── Min variants (transparent/light bg, colored text, border) ── */
+
+.defaultMin {
+  background: var(--msg-default-background-min);
+  color: var(--msg-default-foreground-min);
+  border: var(--border-xs) solid var(--msg-default-border-min);
+}
+
+.destructiveMin {
+  background: var(--msg-destructive-background-min);
+  color: var(--msg-destructive-foreground-min);
+  border: var(--border-xs) solid var(--msg-destructive-border-min);
+}
+
+.successMin {
+  background: var(--msg-success-background-min);
+  color: var(--msg-success-foreground-min);
+  border: var(--border-xs) solid var(--msg-success-border-min);
+}
+
+.alertMin {
+  background: var(--msg-alert-background-min);
+  color: var(--msg-alert-foreground-min);
+  border: var(--border-xs) solid var(--msg-alert-border-min);
+}
+
+.brandMin {
+  background: var(--msg-brand-background-min);
+  color: var(--msg-brand-foreground-min);
+  border: var(--border-xs) solid var(--msg-brand-border-min);
+}

@@ -7,6 +7,7 @@ import ElevationPage from './pages/ElevationPage.jsx'
 import BorderWidthPage from './pages/BorderWidthPage.jsx'
 import BreakpointsPage from './pages/BreakpointsPage.jsx'
 import SemanticPage from './pages/SemanticPage.jsx'
+import BadgePage from './pages/BadgePage.jsx'
 
 const NAV_ITEMS = [
   { id: 'colors', label: 'Colors' },
@@ -17,6 +18,8 @@ const NAV_ITEMS = [
   { id: 'border-width', label: 'Border Width' },
   { id: 'breakpoints', label: 'Breakpoints' },
   { id: 'semantic', label: 'Semantic Colors' },
+  { id: '_divider' },
+  { id: 'badge', label: 'Badge' },
 ]
 
 export default function App() {
@@ -47,28 +50,36 @@ export default function App() {
           Token Reference
         </p>
         <ul style={{ listStyle: 'none' }}>
-          {NAV_ITEMS.map(item => (
-            <li key={item.id}>
-              <button
-                onClick={() => setActivePage(item.id)}
-                style={{
-                  display: 'block',
-                  width: '100%',
-                  textAlign: 'left',
-                  padding: '8px 12px',
-                  borderRadius: 6,
-                  border: 'none',
-                  cursor: 'pointer',
-                  fontSize: 14,
-                  fontWeight: activePage === item.id ? 600 : 400,
-                  color: activePage === item.id ? 'var(--blue-50)' : 'var(--grey-30)',
-                  background: activePage === item.id ? 'var(--blue-100)' : 'transparent',
-                }}
-              >
-                {item.label}
-              </button>
-            </li>
-          ))}
+          {NAV_ITEMS.map(item => {
+            if (item.id === '_divider') {
+              return <li key="_divider" style={{
+                borderTop: '1px solid var(--grey-80)',
+                margin: '12px 0',
+              }} />
+            }
+            return (
+              <li key={item.id}>
+                <button
+                  onClick={() => setActivePage(item.id)}
+                  style={{
+                    display: 'block',
+                    width: '100%',
+                    textAlign: 'left',
+                    padding: '8px 12px',
+                    borderRadius: 6,
+                    border: 'none',
+                    cursor: 'pointer',
+                    fontSize: 14,
+                    fontWeight: activePage === item.id ? 600 : 400,
+                    color: activePage === item.id ? 'var(--blue-50)' : 'var(--grey-30)',
+                    background: activePage === item.id ? 'var(--blue-100)' : 'transparent',
+                  }}
+                >
+                  {item.label}
+                </button>
+              </li>
+            )
+          })}
         </ul>
       </nav>
       <main style={{ flex: 1, padding: 48, overflowY: 'auto' }}>
@@ -80,6 +91,7 @@ export default function App() {
         {activePage === 'border-width' && <BorderWidthPage />}
         {activePage === 'breakpoints' && <BreakpointsPage />}
         {activePage === 'semantic' && <SemanticPage />}
+        {activePage === 'badge' && <BadgePage />}
       </main>
     </div>
   )
