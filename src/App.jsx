@@ -1,13 +1,20 @@
 import { useState } from 'react'
 import ColorsPage from './pages/ColorsPage.jsx'
+import TypographyPage from './pages/TypographyPage.jsx'
+import SpacingPage from './pages/SpacingPage.jsx'
+import RadiusPage from './pages/RadiusPage.jsx'
+import ElevationPage from './pages/ElevationPage.jsx'
+import BorderWidthPage from './pages/BorderWidthPage.jsx'
+import SemanticPage from './pages/SemanticPage.jsx'
 
 const NAV_ITEMS = [
   { id: 'colors', label: 'Colors' },
-  // Future pages:
-  // { id: 'typography', label: 'Typography' },
-  // { id: 'elevation', label: 'Elevation' },
-  // { id: 'spacing', label: 'Spacing & Radius' },
-  // { id: 'semantic', label: 'Semantic Tokens' },
+  { id: 'typography', label: 'Typography' },
+  { id: 'spacing', label: 'Spacing' },
+  { id: 'radius', label: 'Border Radius' },
+  { id: 'elevation', label: 'Elevation' },
+  { id: 'border-width', label: 'Border Width' },
+  { id: 'semantic', label: 'Semantic Colors' },
 ]
 
 export default function App() {
@@ -64,6 +71,12 @@ export default function App() {
       </nav>
       <main style={{ flex: 1, padding: 48, overflowY: 'auto' }}>
         {activePage === 'colors' && <ColorsPage />}
+        {activePage === 'typography' && <TypographyPage />}
+        {activePage === 'spacing' && <SpacingPage />}
+        {activePage === 'radius' && <RadiusPage />}
+        {activePage === 'elevation' && <ElevationPage />}
+        {activePage === 'border-width' && <BorderWidthPage />}
+        {activePage === 'semantic' && <SemanticPage />}
       </main>
     </div>
   )

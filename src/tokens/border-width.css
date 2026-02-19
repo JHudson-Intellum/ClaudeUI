@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Border Width Tokens — ID.s Design System
+   Source: Figma "ID.s 2026 _WIP" → Border Width tokens page
+
+   4 width levels from xs (hairline) to lg (heavy).
+   ========================================================================== */
+
+:root {
+  --border-xs: 1px;
+  --border-sm: 2px;
+  --border-md: 3px;
+  --border-lg: 4px;
+}

@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Border Radius Tokens — ID.s Design System
+   Source: Figma "ID.s 2026 _WIP" → Border Radius tokens page
+   ========================================================================== */
+
+:root {
+  --rounded-none: 0px;
+  --rounded-xs: 2px;
+  --rounded-sm: 4px;
+  --rounded-md: 6px;
+  --rounded-lg: 8px;
+  --radius: 10px;
+  --rounded-xl: 12px;
+  --rounded-2xl: 16px;
+  --rounded-3xl: 24px;
+  --rounded-full: 9999px;
+}

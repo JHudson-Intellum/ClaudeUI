@@ -1,4 +1,10 @@
 @import './tokens/colors.css';
+@import './tokens/typography.css';
+@import './tokens/spacing.css';
+@import './tokens/radius.css';
+@import './tokens/elevation.css';
+@import './tokens/border-width.css';
+@import './tokens/semantic.css';
 
 * {
   margin: 0;

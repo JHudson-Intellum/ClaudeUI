@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Semantic Color Tokens — ID.s Design System
+   Source: Figma "ID.s 2026 _WIP" → Semantic Colors tokens page
+
+   These tokens map primitive palette values to UI roles.
+   In Figma, "brand-neutrals-XX" = grey-XX and "brand-shades-XX" = blue-XX.
+   Light mode only — dark mode will override these values.
+   ========================================================================== */
+
+:root {
+  /* ── Surface ── */
+  --surface-primary: var(--grey-200);
+  --surface-secondary: var(--grey-120);
+  --surface-tertiary: var(--grey-100);
+  --surface-inverse-primary: var(--grey-0);
+  --surface-inverse-secondary: var(--grey-10);
+
+  /* ── Border ── */
+  --border-primary: var(--grey-90);
+
+  /* ── Card ── */
+  --card-background: var(--surface-primary);
+  --card-primary-text: var(--grey-10);
+  --card-secondary-text: var(--grey-40);
+  --card-border: var(--border-primary);
+
+  /* ── Buttons ── */
+  --btn-brand-background: var(--blue-50);
+  --btn-brand-hover: var(--blue-40);
+  --btn-brand-text: var(--grey-100);
+  --btn-default-text: var(--grey-100);
+  --btn-default-background: var(--grey-20);
+  --btn-default-hover: var(--grey-40);
+  --btn-secondary-text: var(--grey-10);
+  --btn-secondary-background: var(--grey-80);
+  --btn-secondary-hover: var(--grey-70);
+  --btn-disabled-text: var(--grey-60);
+  --btn-disabled-background: var(--grey-90);
+  --btn-border-text: var(--grey-20);
+  --btn-border-border: var(--grey-60);
+  --btn-border-background: var(--white-alpha-001);
+  --btn-border-hover: var(--grey-80);
+  --btn-ghost-text: var(--grey-10);
+  --btn-ghost-hover: var(--grey-90);
+
+  /* ── Messaging — Default ── */
+  --msg-default-background-max: var(--grey-10);
+  --msg-default-foreground-max: var(--grey-100);
+  --msg-default-border-max: var(--grey-100);
+  --msg-default-background-min: var(--white-alpha-0);
+  --msg-default-foreground-min: var(--grey-10);
+  --msg-default-border-min: var(--grey-90);
+  --msg-default-background-mid: var(--grey-90);
+  --msg-default-foreground-mid: var(--grey-10);
+  --msg-default-border-mid: var(--grey-90);
+
+  /* ── Messaging — Success ── */
+  --msg-success-background-max: var(--green-30);
+  --msg-success-foreground-max: var(--green-100);
+  --msg-success-border-max: var(--green-30);
+  --msg-success-background-min: var(--green-90);
+  --msg-success-foreground-min: var(--green-30);
+  --msg-success-border-min: var(--green-50);
+
+  /* ── Messaging — Destructive ── */
+  --msg-destructive-background-max: var(--red-40);
+  --msg-destructive-foreground-max: var(--red-100);
+  --msg-destructive-border-max: var(--red-40);
+  --msg-destructive-background-min: var(--red-100);
+  --msg-destructive-foreground-min: var(--red-40);
+  --msg-destructive-border-min: var(--red-50);
+
+  /* ── Messaging — Alert ── */
+  --msg-alert-background-max: var(--amber-30);
+  --msg-alert-foreground-max: var(--amber-100);
+  --msg-alert-border-max: var(--amber-30);
+  --msg-alert-background-min: var(--amber-100);
+  --msg-alert-foreground-min: var(--amber-20);
+  --msg-alert-border-min: var(--amber-50);
+
+  /* ── Messaging — Brand ── */
+  --msg-brand-background-max: var(--blue-50);
+  --msg-brand-foreground-max: var(--white-alpha-100);
+  --msg-brand-border-max: var(--blue-50);
+  --msg-brand-background-min: var(--white-alpha-0);
+  --msg-brand-foreground-min: var(--blue-50);
+  --msg-brand-border-min: var(--blue-50);
+}
