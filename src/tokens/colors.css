@@ -118,3 +118,73 @@
   --black-alpha-95: #000000f2;
   --black-alpha-100: #000000;
 }
+
+/* ==========================================================================
+   Dark Mode Primitives
+   All scales invert — semantic tokens stay the same, only raw values change.
+   ========================================================================== */
+
+:root[data-theme="dark"] {
+  /* Grey (13 steps) */
+  --grey-0: #ffffff;
+  --grey-10: #f8f9fa;
+  --grey-20: #f8f9fa;
+  --grey-30: #e9ecef;
+  --grey-40: #dee2e6;
+  --grey-50: #ced4da;
+  --grey-60: #adb5bd;
+  --grey-70: #6c757d;
+  --grey-80: #495057;
+  --grey-90: #343a40;
+  --grey-100: #212529;
+  --grey-120: #141516;
+  --grey-200: #000000;
+
+  /* Blue / Brand (10 steps) */
+  --blue-10: #f5faff;
+  --blue-20: #cce2ff;
+  --blue-30: #9ac2fe;
+  --blue-40: #669afa;
+  --blue-50: #3168f6;
+  --blue-60: #1244ce;
+  --blue-70: #113692;
+  --blue-80: #102860;
+  --blue-90: #0f1e3e;
+  --blue-100: #0d172b;
+
+  /* Red (10 steps) */
+  --red-10: #ffe5e9;
+  --red-20: #ffadb6;
+  --red-30: #fc838d;
+  --red-40: #f76469;
+  --red-50: #e5484d;
+  --red-60: #b91d22;
+  --red-70: #82171b;
+  --red-80: #5e1214;
+  --red-90: #3f0d0f;
+  --red-100: #290a0b;
+
+  /* Green (10 steps) */
+  --green-10: #eafbed;
+  --green-20: #a8e6b3;
+  --green-30: #7dd48d;
+  --green-40: #5fc471;
+  --green-50: #46a758;
+  --green-60: #368746;
+  --green-70: #266432;
+  --green-80: #194822;
+  --green-90: #113619;
+  --green-100: #0b2811;
+
+  /* Amber (10 steps) */
+  --amber-10: #fff2e0;
+  --amber-20: #ffdeb3;
+  --amber-30: #ffc885;
+  --amber-40: #f8b262;
+  --amber-50: #f5892b;
+  --amber-60: #b4660e;
+  --amber-70: #7f470b;
+  --amber-80: #5b3206;
+  --amber-90: #3f2103;
+  --amber-100: #2d1701;
+}

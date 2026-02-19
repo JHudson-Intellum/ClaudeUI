@@ -19,9 +19,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Light theme (default) ── */
-:root,
-:root[data-theme="light"] {
+/* ── Shell / chrome variables ──
+   These use primitive refs that automatically adapt via
+   the dark-mode overrides in colors.css */
+:root {
   --page-bg: var(--grey-200);
   --page-text: var(--grey-10);
   --page-secondary: var(--grey-40);
@@ -43,29 +44,4 @@ body {
 
   --swatch-border: var(--grey-90);
   --preview-bg: var(--grey-200);
-}
-
-/* ── Dark theme ── */
-:root[data-theme="dark"] {
-  --page-bg: var(--grey-10);
-  --page-text: var(--grey-100);
-  --page-secondary: var(--grey-60);
-  --page-muted: var(--grey-50);
-  --page-subtle: var(--grey-40);
-
-  --nav-bg: var(--grey-0);
-  --nav-border: var(--grey-30);
-  --nav-title: var(--grey-100);
-  --nav-subtitle: var(--grey-50);
-  --nav-item: var(--grey-60);
-  --nav-active: var(--blue-60);
-  --nav-active-bg: var(--blue-10);
-  --nav-toggle-bg: var(--grey-20);
-
-  --code-bg: var(--grey-0);
-  --code-border: var(--grey-30);
-  --code-text: var(--grey-80);
-
-  --swatch-border: var(--grey-30);
-  --preview-bg: var(--grey-20);
 }
