@@ -1,0 +1,160 @@
+/* Callout — ID.s Design System
+   5 variants: default (brand), success, caution, warning, ai
+   Ref: uikit/banners/callout */
+
+.callout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sizing-lg);
+  width: 100%;
+  padding: var(--sizing-sm-border);
+  border: var(--border-xs) solid transparent;
+  border-radius: var(--rounded-md);
+}
+
+/* ── Variants ── */
+
+.default {
+  background: rgba(49, 104, 246, 0.05);
+}
+
+.success {
+  background: rgba(70, 167, 88, 0.05);
+}
+
+.caution {
+  background: rgba(245, 137, 43, 0.05);
+}
+
+.warning {
+  background: rgba(229, 72, 77, 0.05);
+}
+
+.ai {
+  background: var(--ai-5);
+}
+
+/* ── Content layout ── */
+
+.content {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  gap: var(--sizing-sm);
+}
+
+.materialIcon {
+  flex-shrink: 0;
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Icon colors per variant */
+.default .materialIcon {
+  color: var(--blue-50);
+}
+
+.success .materialIcon {
+  color: var(--green-50);
+}
+
+.caution .materialIcon {
+  color: var(--amber-50);
+}
+
+.warning .materialIcon {
+  color: var(--red-50);
+}
+
+.ai .materialIcon {
+  color: var(--blue-50);
+}
+
+/* ── Text ── */
+
+.text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--sizing-2xs);
+}
+
+.heading {
+  font-family: var(--font-support);
+  font-size: var(--support-14-size);
+  line-height: var(--support-14-line-height);
+  font-weight: var(--weight-medium);
+  color: var(--page-text);
+}
+
+.body {
+  font-family: var(--font-body);
+  font-size: var(--body-14-size);
+  line-height: var(--body-14-line-height);
+  font-weight: var(--weight-regular);
+  color: var(--page-secondary);
+}
+
+.subText {
+  font-family: var(--font-body);
+  font-size: var(--body-14-size);
+  line-height: var(--body-14-line-height);
+  font-weight: var(--weight-regular);
+  color: var(--page-muted);
+}
+
+/* ── Actions ── */
+
+.actions {
+  display: flex;
+  gap: var(--sizing-xs);
+  padding-block-start: var(--sizing-xs);
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sizing-2xs);
+  padding: var(--sizing-2xs) var(--sizing-sm);
+  border: none;
+  border-radius: var(--rounded-sm);
+  font-family: var(--font-support);
+  font-size: var(--support-12-size);
+  line-height: var(--support-12-line-height);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+}
+
+.actionPrimary {
+  background: var(--blue-50);
+  color: var(--grey-100);
+}
+
+.actionSecondary {
+  background: transparent;
+  border: var(--border-xs) solid var(--grey-60);
+  padding: var(--sizing-2xs-border) var(--sizing-sm-border);
+  color: var(--page-text);
+}
+
+/* ── Close button ── */
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--sizing-xl);
+  height: var(--sizing-xl);
+  padding: 0;
+  border: none;
+  border-radius: var(--rounded-sm);
+  background: transparent;
+  color: var(--page-muted);
+  cursor: pointer;
+}

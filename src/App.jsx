@@ -11,6 +11,7 @@ import BadgePage from './pages/BadgePage.jsx'
 import SocialSharePage from './pages/SocialSharePage.jsx'
 import AvatarPage from './pages/AvatarPage.jsx'
 import IconsPage from './pages/IconsPage.jsx'
+import CalloutPage from './pages/CalloutPage.jsx'
 import { downloadTokensJSON } from './utils/exportTokens.js'
 
 const NAV_ITEMS = [
@@ -26,6 +27,7 @@ const NAV_ITEMS = [
   { id: '_divider' },
   { id: 'badge', label: 'Badge' },
   { id: 'avatar', label: 'Avatar' },
+  { id: 'callout', label: 'Callout' },
   { id: 'social-share', label: 'Social Share' },
 ]
 
@@ -169,6 +171,7 @@ export default function App() {
         {activePage === 'icons' && <IconsPage />}
         {activePage === 'badge' && <BadgePage />}
         {activePage === 'avatar' && <AvatarPage />}
+        {activePage === 'callout' && <CalloutPage />}
         {activePage === 'social-share' && <SocialSharePage />}
       </main>
     </div>
