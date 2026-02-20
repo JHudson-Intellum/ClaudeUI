@@ -150,6 +150,7 @@ const ALL_ICONS = Object.entries(CATEGORIES).flatMap(([cat, icons]) =>
 
 export default function IconsPage() {
   const [query, setQuery] = useState('')
+  const [filled, setFilled] = useState(false)
   const lowerQuery = query.toLowerCase()
 
   const filteredIcons = lowerQuery
@@ -186,8 +187,8 @@ export default function IconsPage() {
         Click any icon name to copy it.
       </p>
 
-      {/* ── Search ── */}
-      <div style={{ marginBottom: 40 }}>
+      {/* ── Search + Fill toggle ── */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 40, flexWrap: 'wrap' }}>
         <input
           type="text"
           placeholder="Search icons..."
@@ -205,6 +206,33 @@ export default function IconsPage() {
             outline: 'none',
           }}
         />
+        <button
+          onClick={() => setFilled(f => !f)}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 6,
+            padding: '8px 14px',
+            fontSize: 12,
+            fontWeight: 600,
+            border: '1px solid var(--code-border)',
+            borderRadius: 'var(--rounded-md)',
+            background: filled ? 'var(--nav-active-bg)' : 'var(--code-bg)',
+            color: filled ? 'var(--nav-active)' : 'var(--page-text)',
+            cursor: 'pointer',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          <span style={{
+            fontFamily: 'Material Symbols Outlined',
+            fontSize: 18,
+            lineHeight: 1,
+            fontVariationSettings: "'FILL' 1",
+          }}>
+            format_paint
+          </span>
+          {filled ? 'Filled' : 'Outlined'}
+        </button>
         {lowerQuery && (
           <span style={{
             marginLeft: 12,
@@ -230,7 +258,7 @@ export default function IconsPage() {
               gap: 8,
             }}>
               {filteredIcons.map(icon => (
-                <IconCell key={icon.name} name={icon.name} />
+                <IconCell key={icon.name} name={icon.name} filled={filled} />
               ))}
             </div>
           </div>
@@ -261,7 +289,7 @@ export default function IconsPage() {
               gap: 8,
             }}>
               {icons.map(name => (
-                <IconCell key={name} name={name} />
+                <IconCell key={name} name={name} filled={filled} />
               ))}
             </div>
           </div>
@@ -354,9 +382,16 @@ export default function IconsPage() {
         Usage
       </h3>
 
-      <CodeBlock title="Material Symbol (inline)">{`<span
+      <CodeBlock title="Material Symbol (outlined)">{`<span
   className="material-symbols-outlined"
   style={{ fontSize: 20 }}
+>
+  check_circle
+</span>`}</CodeBlock>
+
+      <CodeBlock title="Material Symbol (filled)">{`<span
+  className="material-symbols-outlined"
+  style={{ fontSize: 20, fontVariationSettings: "'FILL' 1" }}
 >
   check_circle
 </span>`}</CodeBlock>
@@ -408,7 +443,7 @@ export default function IconsPage() {
 }
 
 /* ── Icon cell component ── */
-function IconCell({ name }) {
+function IconCell({ name, filled }) {
   const [copied, setCopied] = useState(false)
 
   function handleClick() {
@@ -440,6 +475,7 @@ function IconCell({ name }) {
           fontFamily: 'Material Symbols Outlined',
           fontSize: 24,
           lineHeight: 1,
+          fontVariationSettings: `'FILL' ${filled ? 1 : 0}`,
         }}
       >
         {name}
