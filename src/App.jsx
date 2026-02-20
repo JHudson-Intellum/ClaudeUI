@@ -11,6 +11,7 @@ import BadgePage from './pages/BadgePage.jsx'
 import SocialSharePage from './pages/SocialSharePage.jsx'
 import AvatarPage from './pages/AvatarPage.jsx'
 import IconsPage from './pages/IconsPage.jsx'
+import { downloadTokensJSON } from './utils/exportTokens.js'
 
 const NAV_ITEMS = [
   { id: 'colors', label: 'Colors' },
@@ -88,6 +89,33 @@ export default function App() {
             {theme === 'light' ? 'dark_mode' : 'light_mode'}
           </span>
           {theme === 'light' ? 'Dark mode' : 'Light mode'}
+        </button>
+
+        <button
+          onClick={downloadTokensJSON}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 8,
+            padding: '8px 12px',
+            borderRadius: 6,
+            border: '1px solid var(--nav-border)',
+            cursor: 'pointer',
+            fontSize: 12,
+            fontWeight: 500,
+            color: 'var(--nav-item)',
+            background: 'var(--nav-toggle-bg)',
+            marginBottom: 20,
+          }}
+        >
+          <span style={{
+            fontFamily: 'Material Symbols Rounded',
+            fontSize: 16,
+            lineHeight: 1,
+          }}>
+            download
+          </span>
+          Export tokens JSON
         </button>
 
         <ul style={{ listStyle: 'none' }}>
