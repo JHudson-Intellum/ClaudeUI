@@ -226,7 +226,7 @@ export default function BadgePage() {
      default: height 24px, px var(--sizing-xs),  font 12px
      large:   height 32px, px var(--sizing-sm),  font 14px
 
-   Icons use Google Material Symbols Outlined font.
+   Icons use Google Material Symbols Rounded font.
    Pass any symbol name as the icon prop (e.g. "check_circle").
 */`}</CodeBlock>
 

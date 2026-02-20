@@ -224,10 +224,10 @@ export default function IconsPage() {
           }}
         >
           <span style={{
-            fontFamily: 'Material Symbols Outlined',
+            fontFamily: 'Material Symbols Rounded',
             fontSize: 18,
             lineHeight: 1,
-            fontVariationSettings: "'FILL' 1",
+            fontVariationSettings: "'FILL' 1, 'opsz' 20, 'wght' 400, 'GRAD' 0",
           }}>
             format_paint
           </span>
@@ -383,14 +383,14 @@ export default function IconsPage() {
       </h3>
 
       <CodeBlock title="Material Symbol (outlined)">{`<span
-  className="material-symbols-outlined"
+  className="material-symbols-rounded"
   style={{ fontSize: 20 }}
 >
   check_circle
 </span>`}</CodeBlock>
 
       <CodeBlock title="Material Symbol (filled)">{`<span
-  className="material-symbols-outlined"
+  className="material-symbols-rounded"
   style={{ fontSize: 20, fontVariationSettings: "'FILL' 1" }}
 >
   check_circle
@@ -398,7 +398,7 @@ export default function IconsPage() {
 
       <CodeBlock title="Material Symbol (CSS Module helper)">{`/* In your CSS Module */
 .icon {
-  font-family: 'Material Symbols Outlined';
+  font-family: 'Material Symbols Rounded';
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -426,7 +426,7 @@ export default function IconsPage() {
         Architecture
       </h3>
 
-      <CodeBlock title="Icon sources">{`/* Material Symbols Outlined
+      <CodeBlock title="Icon sources">{`/* Material Symbols Rounded
    Loaded via Google Fonts in index.html.
    Use any icon name from this page as text content.
    Reference: https://fonts.google.com/icons
@@ -472,10 +472,10 @@ function IconCell({ name, filled }) {
     >
       <span
         style={{
-          fontFamily: 'Material Symbols Outlined',
+          fontFamily: 'Material Symbols Rounded',
           fontSize: 24,
           lineHeight: 1,
-          fontVariationSettings: `'FILL' ${filled ? 1 : 0}`,
+          fontVariationSettings: `'FILL' ${filled ? 1 : 0}, 'opsz' 20, 'wght' 400, 'GRAD' 0`,
         }}
       >
         {name}

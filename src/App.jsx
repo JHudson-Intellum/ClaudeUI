@@ -81,7 +81,7 @@ export default function App() {
           }}
         >
           <span style={{
-            fontFamily: 'Material Symbols Outlined',
+            fontFamily: 'Material Symbols Rounded',
             fontSize: 16,
             lineHeight: 1,
           }}>

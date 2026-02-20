@@ -198,7 +198,7 @@ export default function SocialSharePage() {
 
    Action text (Favorites / Share):
      color       → var(--grey-40) → var(--grey-10) on hover
-     icon        → Material Symbols Outlined
+     icon        → Material Symbols Rounded
 
    Platform icons:
      X, Facebook, LinkedIn → inline SVG

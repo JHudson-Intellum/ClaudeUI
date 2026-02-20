@@ -17,6 +17,8 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* ── Shell / chrome variables ──
@@ -44,4 +46,8 @@ body {
 
   --swatch-border: var(--grey-90);
   --preview-bg: var(--grey-200);
+
+  /* Icon defaults: Rounded, 20dp optical size, weight 400, grade normal */
+  --icon-font: 'Material Symbols Rounded';
+  --icon-variation: 'opsz' 20, 'wght' 400, 'GRAD' 0;
 }
