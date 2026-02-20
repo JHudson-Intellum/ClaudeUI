@@ -222,9 +222,9 @@ export default function BadgePage() {
      → colors.css: #276d35
 
    Sizes use spacing tokens for padding:
-     small:   height 20px, px var(--spacing-xs),  font 10px
-     default: height 24px, px var(--spacing-xs),  font 12px
-     large:   height 32px, px var(--spacing-sm),  font 14px
+     small:   height 20px, px var(--sizing-xs),  font 10px
+     default: height 24px, px var(--sizing-xs),  font 12px
+     large:   height 32px, px var(--sizing-sm),  font 14px
 
    Icons use Google Material Symbols Outlined font.
    Pass any symbol name as the icon prop (e.g. "check_circle").

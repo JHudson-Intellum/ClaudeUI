@@ -5,7 +5,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-3xs);
+  gap: var(--sizing-3xs);
   border-radius: var(--rounded-sm);
   font-family: var(--font-sans);
   font-weight: 600;
@@ -17,21 +17,21 @@
 
 .small {
   height: 20px;
-  padding: var(--spacing-2xs) var(--spacing-xs);
+  padding: var(--sizing-2xs) var(--sizing-xs);
   font-size: 10px;
   line-height: 12px;
 }
 
 .default {
   height: 24px;
-  padding: var(--spacing-2xs) var(--spacing-xs);
+  padding: var(--sizing-2xs) var(--sizing-xs);
   font-size: 12px;
   line-height: 16px;
 }
 
 .large {
   height: 32px;
-  padding: var(--spacing-2xs) var(--spacing-sm);
+  padding: var(--sizing-2xs) var(--sizing-sm);
   font-size: 14px;
   line-height: 18px;
 }

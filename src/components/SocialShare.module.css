@@ -3,7 +3,7 @@
 .wrapper {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: var(--sizing-md);
 }
 
 /* ── Action buttons (Favorites / Share) ── */
@@ -11,8 +11,8 @@
 .action {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-3xs);
-  padding: var(--spacing-xs) 0;
+  gap: var(--sizing-3xs);
+  padding: var(--sizing-xs) 0;
   border: none;
   background: none;
   cursor: pointer;
@@ -52,12 +52,12 @@
 
 .popover {
   position: absolute;
-  top: calc(100% + var(--spacing-xs));
+  top: calc(100% + var(--sizing-xs));
   left: 0;
   display: flex;
   align-items: center;
-  gap: var(--spacing-2xs);
-  padding: var(--spacing-xs);
+  gap: var(--sizing-2xs);
+  padding: var(--sizing-xs);
   background: var(--surface-primary);
   border: var(--border-xs) solid var(--border-primary);
   border-radius: var(--rounded-md);

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import ColorsPage from './pages/ColorsPage.jsx'
 import TypographyPage from './pages/TypographyPage.jsx'
-import SpacingPage from './pages/SpacingPage.jsx'
+import SizingPage from './pages/SizingPage.jsx'
 import RadiusPage from './pages/RadiusPage.jsx'
 import ElevationPage from './pages/ElevationPage.jsx'
 import BorderWidthPage from './pages/BorderWidthPage.jsx'
@@ -13,7 +13,7 @@ import SocialSharePage from './pages/SocialSharePage.jsx'
 const NAV_ITEMS = [
   { id: 'colors', label: 'Colors' },
   { id: 'typography', label: 'Typography' },
-  { id: 'spacing', label: 'Spacing' },
+  { id: 'sizing', label: 'Sizing' },
   { id: 'radius', label: 'Border Radius' },
   { id: 'elevation', label: 'Elevation' },
   { id: 'border-width', label: 'Border Width' },
@@ -128,7 +128,7 @@ export default function App() {
       }}>
         {activePage === 'colors' && <ColorsPage />}
         {activePage === 'typography' && <TypographyPage />}
-        {activePage === 'spacing' && <SpacingPage />}
+        {activePage === 'sizing' && <SizingPage />}
         {activePage === 'radius' && <RadiusPage />}
         {activePage === 'elevation' && <ElevationPage />}
         {activePage === 'border-width' && <BorderWidthPage />}

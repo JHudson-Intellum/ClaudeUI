@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Sizing Tokens — ID.s Design System
+   Source: Figma "ID.s 2026 _WIP" → Sizing tokens page
+
+   Two scales:
+   1. T-shirt sizes — semantic names with border variants
+   2. Raw numeric — base unit × 4px foundation
+
+   Border variants subtract 1px for optical alignment inside borders.
+   ========================================================================== */
+
+:root {
+  /* ── T-shirt Sizes ── */
+  --sizing-4xs: 1px;
+  --sizing-3xs: 2px;
+  --sizing-2xs-border: 3px;
+  --sizing-2xs: 4px;
+  --sizing-xs-border: 7px;
+  --sizing-xs: 8px;
+  --sizing-sm-border: 11px;
+  --sizing-sm: 12px;
+  --sizing-md-border: 15px;
+  --sizing-md: 16px;
+  --sizing-lg-border: 19px;
+  --sizing-lg: 20px;
+  --sizing-xl-border: 23px;
+  --sizing-xl: 24px;
+  --sizing-2xl: 32px;
+  --sizing-3xl: 36px;
+  --sizing-4xl: 40px;
+  --sizing-5xl: 44px;
+  --sizing-6xl: 48px;
+  --sizing-7xl: 64px;
+  --sizing-8xl: 96px;
+
+  /* ── Raw Scale ── */
+  --sizing-0: 0px;
+  --sizing-0_25: 1px;
+  --sizing-0_5: 2px;
+  --sizing-0_75: 3px;
+  --sizing-1: 4px;
+  --sizing-1_25: 5px;
+  --sizing-1_5: 6px;
+  --sizing-1_75: 7px;
+  --sizing-2: 8px;
+  --sizing-2_5: 10px;
+  --sizing-3: 12px;
+  --sizing-3_5: 14px;
+  --sizing-3_75: 15px;
+  --sizing-4: 16px;
+  --sizing-4_75: 19px;
+  --sizing-5: 20px;
+  --sizing-5_75: 23px;
+  --sizing-6: 24px;
+  --sizing-7: 28px;
+  --sizing-8: 32px;
+  --sizing-9: 36px;
+  --sizing-10: 40px;
+  --sizing-11: 44px;
+  --sizing-12: 48px;
+  --sizing-14: 56px;
+  --sizing-16: 64px;
+  --sizing-20: 80px;
+  --sizing-24: 96px;
+  --sizing-28: 112px;
+  --sizing-32: 128px;
+  --sizing-36: 144px;
+  --sizing-40: 160px;
+  --sizing-44: 176px;
+  --sizing-48: 192px;
+  --sizing-52: 208px;
+  --sizing-56: 224px;
+  --sizing-60: 240px;
+  --sizing-64: 256px;
+  --sizing-72: 288px;
+  --sizing-80: 320px;
+  --sizing-96: 384px;
+  --sizing-infinite: 9999px;
+}
