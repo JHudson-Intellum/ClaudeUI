@@ -44,6 +44,13 @@
   gap: var(--sizing-sm);
 }
 
+.info {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  gap: var(--sizing-xs);
+}
+
 .materialIcon {
   flex-shrink: 0;
   font-family: 'Material Symbols Rounded';
@@ -112,8 +119,8 @@
 
 .actions {
   display: flex;
+  flex-shrink: 0;
   gap: var(--sizing-xs);
-  padding-block-start: var(--sizing-xs);
 }
 
 .actionButton {
