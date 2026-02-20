@@ -21,7 +21,7 @@
 .small {
   padding: var(--sizing-2xs) var(--sizing-xs);
   font-size: 10px;
-  line-height: 12px;
+  line-height: 16px;
 }
 
 .default {
