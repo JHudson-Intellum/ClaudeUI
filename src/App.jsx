@@ -9,6 +9,7 @@ import BreakpointsPage from './pages/BreakpointsPage.jsx'
 import SemanticPage from './pages/SemanticPage.jsx'
 import BadgePage from './pages/BadgePage.jsx'
 import SocialSharePage from './pages/SocialSharePage.jsx'
+import AvatarPage from './pages/AvatarPage.jsx'
 
 const NAV_ITEMS = [
   { id: 'colors', label: 'Colors' },
@@ -21,6 +22,7 @@ const NAV_ITEMS = [
   { id: 'semantic', label: 'Semantic Colors' },
   { id: '_divider' },
   { id: 'badge', label: 'Badge' },
+  { id: 'avatar', label: 'Avatar' },
   { id: 'social-share', label: 'Social Share' },
 ]
 
@@ -135,6 +137,7 @@ export default function App() {
         {activePage === 'breakpoints' && <BreakpointsPage />}
         {activePage === 'semantic' && <SemanticPage />}
         {activePage === 'badge' && <BadgePage />}
+        {activePage === 'avatar' && <AvatarPage />}
         {activePage === 'social-share' && <SocialSharePage />}
       </main>
     </div>

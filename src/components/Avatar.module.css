@@ -1,0 +1,76 @@
+/* Avatar — ID.s Design System
+   4 styles (Image, Initial, Icon, AI) × 5 sizes (Micro–Macro) */
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--rounded-full);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* ── Sizes ── */
+
+.micro  { width: var(--sizing-xl);  height: var(--sizing-xl);  }
+.small  { width: var(--sizing-2xl); height: var(--sizing-2xl); }
+.default { width: var(--sizing-3xl); height: var(--sizing-3xl); }
+.large  { width: var(--sizing-5xl); height: var(--sizing-5xl); }
+.macro  { width: var(--sizing-8xl); height: var(--sizing-8xl); }
+
+/* ── Border + elevation (Large & Macro only) ── */
+
+.bordered {
+  border: var(--border-md) solid var(--white-alpha-100);
+  box-shadow: var(--elevation-lg);
+}
+
+/* ── Style: Initial ── */
+
+.initialBg {
+  background: var(--grey-80);
+}
+
+.initials {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--grey-10);
+  text-align: center;
+  line-height: 1;
+  user-select: none;
+}
+
+/* ── Style: Icon ── */
+
+.iconBg {
+  background: var(--grey-80);
+}
+
+.materialIcon {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  color: var(--grey-10);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Style: AI ── */
+
+.ai {
+  background: var(--ai-100);
+}
+
+.ai .materialIcon {
+  color: var(--white-alpha-100);
+}
+
+/* ── Style: Image ── */
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--rounded-full);
+}
