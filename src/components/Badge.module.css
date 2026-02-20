@@ -7,8 +7,8 @@
   justify-content: center;
   gap: var(--sizing-3xs);
   border-radius: var(--rounded-sm);
-  font-family: var(--font-sans);
-  font-weight: 600;
+  font-family: var(--font-support);
+  font-weight: var(--weight-medium);
   white-space: nowrap;
   border: none;
 }
@@ -20,20 +20,20 @@
 
 .small {
   padding: var(--sizing-2xs) var(--sizing-xs);
-  font-size: 10px;
-  line-height: 16px;
+  font-size: var(--support-10-size);
+  line-height: var(--support-12-line-height);
 }
 
 .default {
   padding: var(--sizing-2xs) var(--sizing-xs);
-  font-size: 12px;
-  line-height: 16px;
+  font-size: var(--support-12-size);
+  line-height: var(--support-12-line-height);
 }
 
 .large {
   padding: var(--sizing-2xs) var(--sizing-sm);
-  font-size: 14px;
-  line-height: 18px;
+  font-size: var(--support-14-size);
+  line-height: var(--support-14-line-height);
 }
 
 /* Bordered (min) variants: shrink padding by 1px to compensate for border */
