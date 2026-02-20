@@ -17,7 +17,7 @@ export default function AvatarPage() {
         maxWidth: 600,
       }}>
         4 styles &times; 5 sizes. Supports images, initials, icons, and AI branding.
-        Large and Macro sizes include a white border and elevation.
+        Macro size includes a white border and elevation.
       </p>
       <p style={{
         fontSize: 12,
@@ -161,7 +161,7 @@ export default function AvatarPage() {
    large:   --sizing-5xl  (44px)
    macro:   --sizing-8xl  (96px)
 
-   Border (Large + Macro only):
+   Border (Macro only):
      width  → --border-md (3px)
      color  → --white-alpha-100
      shadow → --elevation-lg

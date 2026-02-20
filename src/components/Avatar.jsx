@@ -33,7 +33,7 @@ export default function Avatar({
   icon = 'group',
 }) {
   const sizeClass = SIZE_MAP[size] || SIZE_MAP['default']
-  const hasBorder = size === 'large' || size === 'macro'
+  const hasBorder = size === 'macro'
   const borderClass = hasBorder ? styles.bordered : ''
 
   if (variant === 'image') {
