@@ -13,27 +13,40 @@
   border: none;
 }
 
-/* ── Sizes ── */
+/* ── Sizes ──
+   No fixed height — badges size from padding + text + icon.
+   Min variants (bordered) use -border tokens to subtract 1px
+   so bordered and borderless badges stay optically aligned. */
 
 .small {
-  height: 20px;
   padding: var(--sizing-2xs) var(--sizing-xs);
   font-size: 10px;
   line-height: 12px;
 }
 
 .default {
-  height: 24px;
   padding: var(--sizing-2xs) var(--sizing-xs);
   font-size: 12px;
   line-height: 16px;
 }
 
 .large {
-  height: 32px;
   padding: var(--sizing-2xs) var(--sizing-sm);
   font-size: 14px;
   line-height: 18px;
+}
+
+/* Bordered (min) variants: shrink padding by 1px to compensate for border */
+.small.defaultMin, .small.destructiveMin, .small.successMin, .small.alertMin, .small.brandMin {
+  padding: var(--sizing-2xs-border) var(--sizing-xs-border);
+}
+
+.default.defaultMin, .default.destructiveMin, .default.successMin, .default.alertMin, .default.brandMin {
+  padding: var(--sizing-2xs-border) var(--sizing-xs-border);
+}
+
+.large.defaultMin, .large.destructiveMin, .large.successMin, .large.alertMin, .large.brandMin {
+  padding: var(--sizing-2xs-border) var(--sizing-sm-border);
 }
 
 /* ── Icon ── */

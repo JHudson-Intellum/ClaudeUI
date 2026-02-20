@@ -221,10 +221,15 @@ export default function BadgePage() {
      → semantic.css: var(--green-30)
      → colors.css: #276d35
 
-   Sizes use spacing tokens for padding:
-     small:   height 20px, px var(--sizing-xs),  font 10px
-     default: height 24px, px var(--sizing-xs),  font 12px
-     large:   height 32px, px var(--sizing-sm),  font 14px
+   No fixed heights — badges size from padding + content.
+   Sizes use sizing tokens for padding:
+     small:   py var(--sizing-2xs), px var(--sizing-xs),  font 10px
+     default: py var(--sizing-2xs), px var(--sizing-xs),  font 12px
+     large:   py var(--sizing-2xs), px var(--sizing-sm),  font 14px
+
+   Bordered (min) variants use -border tokens to subtract 1px,
+   keeping optical alignment with borderless badges:
+     e.g. var(--sizing-xs-border) = 7px = xs(8px) - 1px
 
    Icons use Google Material Symbols Rounded font.
    Pass any symbol name as the icon prop (e.g. "check_circle").
