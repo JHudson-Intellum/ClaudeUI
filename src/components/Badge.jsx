@@ -33,7 +33,7 @@ export default function Badge({
   return (
     <span className={`${styles.badge} ${sizeClass} ${colorClass}`}>
       {showIcon && icon && (
-        <span className={styles.icon}>{icon}</span>
+        <span className={styles.materialIcon}>{icon}</span>
       )}
       {children}
     </span>

@@ -51,7 +51,7 @@
 
 /* ── Icon ── */
 
-.icon {
+.materialIcon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,11 +64,11 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.small .icon {
+.small .materialIcon {
   font-size: 14px;
 }
 
-.large .icon {
+.large .materialIcon {
   font-size: 18px;
 }
 
